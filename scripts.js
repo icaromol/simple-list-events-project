@@ -115,7 +115,6 @@ const input = document.querySelector("input")
 
 */
 
-
 /* Aula 7 - Eventos
 
 // Evento que fica observando a janela.
@@ -137,7 +136,6 @@ addEventListener("click", (nomeEventoEscolhido) => {
 })
 
 */
-
 
 /* Aula 8 - Eventos que acontecem em um elemento específico + scroll
 
@@ -193,7 +191,7 @@ form.addEventListener("submit", (eventEnviado2) => {
 
 */
 
-/* Aula 11 - Eventos em input */
+/* Aula 11 - Eventos em input
 const input = document.querySelector("input")
 
 // keydown - quando uma tecla é presisonada (captura tudo (cntrl, shift, esc etc))
@@ -215,6 +213,43 @@ function inputChange() {
   console.log("O input no campo mudou.")
 }
 
-/* Aula 12 - Utilizando o Regexr */
+*/
 
-/* Aula 13 */
+/* Aula 12 - Manipulando valor do input - Validação com Regex /*
+
+const input = document.querySelector("input")
+const form = document.querySelector("form")
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault()
+  const regex = /\D+/g
+  const value = input.value
+
+  if (regex.test(value)) {
+    console.log(value)
+  } else {
+    alert("Valor inválido. Digite o nome do convidado.")
+  }
+
+  // const value = input.value.replace(regex, "")
+  // console.log(value)
+})
+
+/*
+input.addEventListener("input", () => {
+  const value = input.value
+
+  // Cria um regex de validação - apenas identifica letras.
+  const regex = /\D+/g
+
+  // Confere se o valor confere com o regex e retorna somente o padrão encontrado na string
+  // console.log(value.match(regex))
+
+  // Testa se atende o padrão e retorna T or F.
+  // const isValid = regex.test(value)
+  // console.log(isValid)
+
+})
+asfa   */
+
+/* Aula 13 - Depurando o código Debug */
